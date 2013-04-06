@@ -13,3 +13,5 @@ module.exports =
 		require('./in')(args)
 	out: (args) ->
 		require('./out')(args)
+	show: ->
+		require('./show')()
