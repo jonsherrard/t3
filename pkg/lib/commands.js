@@ -1,19 +1,25 @@
 (function() {
   module.exports = {
+    init: function() {
+      return require('./init')();
+    },
     start: function() {
       return require('./start')();
     },
-    create: function() {
-      return require('./create')();
+    create: function(args) {
+      return require('./sheet')(args);
     },
-    sheet: function() {
-      return require('./sheet')();
+    s: function(args) {
+      return require('./sheet')(args);
     },
-    "in": function() {
-      return require('./in')();
+    sheet: function(args) {
+      return require('./sheet')(args);
     },
-    out: function() {
-      return require('./out')();
+    "in": function(args) {
+      return require('./in')(args);
+    },
+    out: function(args) {
+      return require('./out')(args);
     }
   };
 

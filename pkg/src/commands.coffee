@@ -1,11 +1,15 @@
 module.exports =
+	init: ->
+		require('./init')()
 	start: ->
 		require('./start')()
-	create: ->
-		require('./create')()
-	sheet: ->
-		require('./sheet')()
-	in: ->
-		require('./in')()
-	out: ->
-		require('./out')()
+	create: (args) ->
+		require('./sheet')(args)
+	s: (args) ->
+		require('./sheet')(args)
+	sheet: (args) ->
+		require('./sheet')(args)
+	in: (args) ->
+		require('./in')(args)
+	out: (args) ->
+		require('./out')(args)

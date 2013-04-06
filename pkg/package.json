@@ -2,23 +2,21 @@
   "name": "t3",
   "preferGloal": true,
   "author": "Jon Sherrard <j@andthats.it>",
-  "version": "0.18",
-  "description": "CLI time tracking with D3 visualisations",
-  "contributors": [
-  {
-  	"name": "Jonathon Sherrard",
-	"email": "j@andthats.it"
-  },
-  {
-  	"name": "Ben Hartley",
-	"email": "ben@chaffin.ch"
-  }
-  ],
   "version": "0.0.1",
   "description": "Visualisations for the Time Trap Ruby Gem",
+  "contributors": [
+    {
+      "name": "Jonathon Sherrard",
+      "email": "j@andthats.it"
+    },
+    {
+      "name": "Ben Hartley",
+      "email": "ben@chaffin.ch"
+    }
+  ],
   "main": "./bin/t3",
-  "bin" : {
-  	"t3": "./bin/t3"
+  "bin": {
+    "t3": "./bin/t3"
   },
   "scripts": {
     "test": "test"
@@ -33,6 +31,8 @@
   "dependencies": {
     "fs-extra": "~0.6.0",
     "coffee-script": "~1.6.2",
-    "walk": "~2.2.1"
+    "walk": "~2.2.1",
+    "tilde-expansion": "0.0.0",
+    "underscore": "~1.4.4"
   }
 }
