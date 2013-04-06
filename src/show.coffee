@@ -23,4 +23,7 @@ module.exports = ->
 
 		walker.on "end", ->
 			console.log files
+			for file in files
+				fs.readJson file, (err, object) ->
+					console.log object
 
