@@ -2,7 +2,10 @@
   "name": "time-trapped",
   "version": "0.0.1",
   "description": "Visualisations for the Time Trap Ruby Gem",
-  "main": "index.js",
+  "main": "./bin/t3",
+  "bin" : {
+  	"t3": "./bin/t3"
+  },
   "scripts": {
     "test": "test"
   },
@@ -13,5 +16,10 @@
     "d3"
   ],
   "author": "",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "fs-extra": "~0.6.0",
+    "coffee-script": "~1.6.2",
+    "walk": "~2.2.1"
+  }
 }
