@@ -1,0 +1,37 @@
+fs 					= require 'fs'
+{parser, uglify} 	= require 'uglify-js'
+{exec} 				= require 'child_process'
+
+ansi =
+	red  			: '\x1B[31m'
+	green 			: '\x1B[36m'
+	yellow 			: '\x1B[33m'
+	blue  			: '\x1B[34m'
+	dark_grey  		: '\x1B[1;30m'
+	light_grey  	: '\x1B[1;32m'
+	reset   		: '\x1B[0m'
+
+log = (message, color) ->
+	console.log ansi[color] + message + ansi.reset
+
+option '-m', '--message [COMMIT_MESSAGE]', 'set git commit message'
+
+task 'build', 'build app from src files', (options) ->
+	invoke 'build:coffee'
+	invoke 'build:jade'
+	invoke 'build:stylus'
+
+task 'build:stylus', 'build style.css', ->
+	exec 'stylus -c -u nib -o ../html/ style.styl', (err, stdout, stderr) ->
+		err && throw err
+		log 'Build Stylus OK!', 'green'
+
+task 'build:jade', 'build index.html', ->
+	exec 'jade -O ../html/ index.jade', (err, stdout, stderr) ->
+		err && throw err
+		log 'Build Jade OK!', 'green'
+
+task 'build:coffee', 'build script.js', (options) ->
+	exec 'coffee -c -o ../html/ script.coffee', (err, stdout, stderr) ->
+		err && throw err
+		log 'Build Coffee OK!', 'green'
