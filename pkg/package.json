@@ -1,0 +1,17 @@
+{
+  "name": "time-trapped",
+  "version": "0.0.1",
+  "description": "Visualisations for the Time Trap Ruby Gem",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": "",
+  "keywords": [
+    "time",
+    "trap",
+    "d3"
+  ],
+  "author": "",
+  "license": "BSD"
+}
