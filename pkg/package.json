@@ -1,5 +1,18 @@
 {
-  "name": "time-trapped",
+  "name": "t3",
+  "preferGloal": true,
+  "author": "0.18",
+  "CLI time tracking with D3 visualisations",
+  "contributors": [
+  {
+  	"name": "Jonathon Sherrard",
+	"email": "j@andthats.it"
+  },
+  {
+  	"name": "Ben Hartley",
+	"email": "ben@chaffin.ch"
+  }
+  ]
   "version": "0.0.1",
   "description": "Visualisations for the Time Trap Ruby Gem",
   "main": "./bin/t3",
