@@ -1,4 +1,6 @@
 (function() {
-  module.exports = console.log('create');
+  module.exports = function() {
+    return console.log('create');
+  };
 
 }).call(this);

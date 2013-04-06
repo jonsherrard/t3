@@ -1,2 +1,2 @@
-modules.exports = ->
+module.exports = ->
 	console.log 'out'
